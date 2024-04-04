@@ -5,7 +5,9 @@
   </head>
   <body>
     <script language="JavaScript">
-      document.write("Hello, World! This is JavaScript!");
+      document.write("Van Quach");
+      window.alert("Hello, Van Quach");
+      console.log("Hello, Van");
     </script>
  </body>
 </html>
