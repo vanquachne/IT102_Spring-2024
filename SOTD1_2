@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input</title>
+</head>
+<body>
+    <script language="JavaScript">
+        document.write("Interviewee Information Page<br />");
+        document.write("Candidate name: ",prompt("Enter your name",""));
+        document.write("<br /> Candidate email address: ", prompt("Enter your email",""));
+        document.write("<br /> Candidate available start date: ", prompt("Enter your available start date",""));
+    </script>
+</body>
+</html>
