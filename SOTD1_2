@@ -7,7 +7,7 @@
 </head>
 <body>
     <script language="JavaScript">
-        document.write("Interviewee Information Page<br />");
+        document.write("<b>Interviewee Information Page</b><br />");
         document.write("Candidate name: ",prompt("Enter your name",""));
         document.write("<br /> Candidate email address: ", prompt("Enter your email",""));
         document.write("<br /> Candidate available start date: ", prompt("Enter your available start date",""));
