@@ -10,7 +10,10 @@
         document.write("<b>Interviewee Information Page</b><br />");
         document.write("Candidate name: ",prompt("Enter your name",""));
         document.write("<br /> Candidate email address: ", prompt("Enter your email",""));
-        document.write("<br /> Candidate available start date: ", prompt("Enter your available start date",""));
+        document.write("<br /> Candidate available start date: ", prompt("Enter your available start date","") + "<br>" + "<br>");
     </script>
+    <!--Link to Github Exercise 1-->
+    <a href="https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD1_2">Link to Github SOTD1_2</a>
+
 </body>
 </html>
