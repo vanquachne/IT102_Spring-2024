@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First JavaScript</title>
   </head>
-  <body>
+    <body>
     <script language="JavaScript">
       //Write my name on the web page
       document.write("Van Quach");
@@ -13,7 +13,11 @@
       window.alert("Hello, Van Quach");
       //Write my name to the console
       console.log("Hello, Van");
+      document.write("<br>" + "<br>")
     </script>
+    
+    <!--Link to Github Exercise 1_1-->
+    <a href = "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD1_1"> Link to Github SOTD1_1</a>
  </body>
 </html>
 
