@@ -5,9 +5,13 @@
   </head>
   <body>
     <script language="JavaScript">
+      //Write my name on the web page
       document.write("Van Quach");
+      //Write my name to pop up an alert message
       window.alert("Hello, Van Quach");
+      //Write my name to the console
       console.log("Hello, Van");
     </script>
  </body>
 </html>
+
