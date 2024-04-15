@@ -24,24 +24,32 @@
         background-color: rgba(199, 159, 170, 0.37);
       }
 
-      
+      #fullName,#emailAddress,#passwordUser{
+        display: inline-block;
+        width: 300px;
+        margin-top: 17px;
+        padding-right: 7px;
+        text-align: left;
+      }
     </style>
 
     <!--JavaScript function-->
     <script language="JavaScript">
       function reveal(){
-        //display data information 
-        document.getElementById("displayData").innerHTML = "<hr>" + "<h2><b>Customer Data</b></h2>";
-        //display first name + last name
+        // Variables
         var firstName = document.theForm.elements["fname"].value;
         var lastName = document.theForm.elements["lname"].value;
         var fullName = firstName + " " + lastName;
+        var email = document.theForm.elements["email"].value;
+        var passwordReveal = document.theForm.elements["pass"].value;
+        
+        //display data information 
+        document.getElementById("displayData").innerHTML = "<hr>" + "<h2><b>Customer Data</b></h2>";
+        //display first name + last name
         document.getElementById("fullName").innerHTML = "Full Name: " + fullName;
         //display email address
-        var email = document.theForm.elements["email"].value;
         document.getElementById("emailAddress").innerHTML = "Email Address: " + email;
         //display password
-        var passwordReveal = document.theForm.elements["pass"].value;
         document.getElementById("passwordUser").innerHTML = "Password: " + passwordReveal;
       }
     </script>
@@ -83,7 +91,6 @@
     <br>
     <div id = "passwordUser"></div>
     <hr>
-    <h4><i>Additional Link</i></h4>
-    <a href = "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD2_1">SOTD2_1</a>
+    <a href = "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD2_1">Link to Github SOTD2_1</a>
   </body>
 </html>
