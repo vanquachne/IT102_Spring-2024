@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <!--Just practice CSS-->
+    <style>
+      /*Style for login form*/
+      body {
+       text-align: center;
+      }
+
+      form label {
+        display: inline-block;
+        width: 120px;
+        text-align: left;
+        padding-right: 7px;
+      }
+      
+      form input[type = "text"], form input[type = "password"]{
+        width: 170px;
+      }
+
+      form input[type = "button"]{
+        background-color: rgba(199, 159, 170, 0.37);
+      }      
+    </style>
+
+    <!--JavaScript function-->
+    <script language="JavaScript">
+      function reveal(){
+        //display data information 
+        document.getElementById("displayData").innerHTML = "<hr>" + "<h2><b>Customer Data</b></h2>";
+        //display first name + last name
+        var firstName = document.theForm.elements["fname"].value;
+        var lastName = document.theForm.elements["lname"].value;
+        var fullName = firstName + " " + lastName;
+        document.getElementById("fullName").innerHTML = "Full Name: " + fullName;
+        //display email address
+        var email = document.theForm.elements["email"].value;
+        document.getElementById("emailAddress").innerHTML = "Email Address: " + email;
+        //display password
+        var passwordReveal = document.theForm.elements["pass"].value;
+        document.getElementById("passwordUser").innerHTML = "Password: " + passwordReveal;
+      }
+    </script>
+  </head>
+
+  <body>
+    
+    <form name="theForm">
+      <h1><b>SOTD03 - Login Form</b></h1>
+      <!--First name form-->
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname"><br>
+      <br>
+
+      <!--Last name form-->
+      <label for="lname">Last Name:</label>
+      <input type ="text" id="lname" name="lname"><br>
+      <br>
+
+      <!--Email form-->
+      <label for="email">Email Address:</label>
+      <input type="text" id="email" name="email"><br>
+      <br>
+
+      <!--Password form-->
+      <label for="pass">Password:</label>
+      <input type="password" id="pass" name="pass"><br>
+      <br>
+
+      <!--Submit button-->
+      <input type="button" value="Submit" onClick="reveal()">
+    </form>
+
+    <br><br>
+    <div id = displayData></div>
+    <div id = "fullName"></div>
+    <br>
+    <div id = "emailAddress"></div>
+    <br>
+    <div id = "passwordUser"></div>
+  </body>
+</html>
+    
+
