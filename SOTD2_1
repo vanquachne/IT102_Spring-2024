@@ -6,13 +6,12 @@
     <style>
       /*Style for login form*/
       body {
-       text-align: center;
+       text-align: left;
       }
 
       form label {
         display: inline-block;
         width: 120px;
-        text-align: left;
         padding-right: 7px;
       }
       
@@ -21,18 +20,9 @@
       }
 
       form input[type = "button"]{
-        background-color: rgba(199, 159, 170, 0.37);
-      }
-
-      #fullName,#emailAddress,#passwordUser{
-        display: inline-block;
-        width: 300px;
-        margin-top: 17px;
-        padding-right: 7px;
-        text-align: left;
+        background-color: rgba(177, 116, 132, 0.37);
       }
     </style>
-
     <!--JavaScript function-->
     <script language="JavaScript">
       function reveal(){
@@ -94,3 +84,5 @@
     <a href = "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD2_1">Link to Github SOTD2_1</a>
   </body>
 </html>
+    
+
