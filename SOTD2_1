@@ -22,7 +22,9 @@
 
       form input[type = "button"]{
         background-color: rgba(199, 159, 170, 0.37);
-      }      
+      }
+
+      
     </style>
 
     <!--JavaScript function-->
@@ -80,7 +82,8 @@
     <div id = "emailAddress"></div>
     <br>
     <div id = "passwordUser"></div>
+    <hr>
+    <h4><i>Additional Link</i></h4>
+    <a href = "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD2_1">SOTD2_1</a>
   </body>
 </html>
-    
-
