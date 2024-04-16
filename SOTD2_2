@@ -17,8 +17,8 @@
         }
 
         form input[type="button"] {
-          display: block;
-          margin-left: 100px; /* This centers the button horizontally */
+            background-color: rgba(199, 159, 170, 0.37);
+          margin-left: 100px; 
         }
     </style>
 
@@ -44,7 +44,7 @@
                   " so she looks more like a(n) " + adj + " " + noun + ". Her favorite food is " + thing + ", but only if you dye it " +
                   color + ". One of our favorite games is to " + verb + " in my bedroom (except she always wins). Yesterday I felt " +
                   emotion + " because I thought she had run away... but it turns out she went to " + store + " store all day because we were out of " + thing +
-                  ". What a thoughtful kitten!";
+                  ". What a thoughtful kitten!" + "<br><br>";
         }
     </script>
 </head>
@@ -85,7 +85,7 @@
         <input type= "button" value= "Submit" onClick = "madLib()">
     </form>
 
-    <br>
+    <br><br>
     <div id = "story"></div>
     <!--Link to GitHub-->
     <hr>
