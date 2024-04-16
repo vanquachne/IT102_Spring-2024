@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlibs: Cat</title>
+    <!--Practice CSS-->
+    <style>
+        * {
+            text-align: left;
+        }
+
+        form label{
+            text-align: left;
+            display: inline-block;
+            width: 120px;
+        }
+
+        form input[type="button"] {
+          display: block;
+          margin-left: 100px; /* This centers the button horizontally */
+        }
+    </style>
+
+    <!--JavaScript function-->
+    <script>
+        function madLib(){
+            //Variables
+            var noun = document.theForm.elements["noun"].value;
+            var verb = document.theForm.elements["verb"].value;
+            var color = document.theForm.elements["color"].value;
+            var adj = document.theForm.elements["adj"].value;
+            var silly = document.theForm.elements["silly"].value;
+            var store = document.theForm.elements["store"].value;
+            var animal = document.theForm.elements["animal"].value;
+            var emotion = document.theForm.elements["emotion"].value;
+            var thing = document.theForm.elements["thing"].value;
+            var food = document.theForm.elements["food"].value;
+
+            //Display results
+             document.getElementById("story").innerHTML =
+                  "<hr>" + "<h2><b>Story</b></h2>" +
+                  "My " + animal + ", " + silly + ", is the best kitten ever! Her mom was a tabby cat and her dad was a " + animal +
+                  " so she looks more like a(n) " + adj + " " + noun + ". Her favorite food is " + thing + ", but only if you dye it " +
+                  color + ". One of our favorite games is to " + verb + " in my bedroom (except she always wins). Yesterday I felt " +
+                  emotion + " because I thought she had run away... but it turns out she went to " + store + " store all day because we were out of " + thing +
+                  ". What a thoughtful kitten!";
+        }
+    </script>
+</head>
+<body>
+    <!--Form-->
+    <form name = "theForm">
+        <h1><b>SOTD04 - Mad Lib</b></h1>
+        <label for = "noun">Noun:</label>
+        <input type = "text" id = "noun" name = "noun"><br><br>
+
+        <label for = "verb">Verb:</label>
+        <input type = "text" id = "verb" name = "verb"><br><br>
+
+        <label for = "color">Color:</label>
+        <input type = "text" id = "color" name = "color"><br><br>
+
+        <label for = "adj">Adjective:</label>
+        <input type = "text" id = "adj" name = "adj"><br><br>
+
+        <label for = "silly">Silly Word:</label>
+        <input type = "text" id = "silly" name = "silly"><br><br>
+
+        <label for = "store">Store Name:</label>
+        <input type = "text" id = "store" name = "store"><br><br>
+
+        <label for = "animal">Animal:</label>
+        <input type = "text" id = "animal" name = "animal"><br><br>
+
+        <label for = "emotion">Emotion:</label>
+        <input type = "text" id = "emotion" name = "emotion"><br><br>
+
+        <label for = "thing"> Things:</label>
+        <input type = "text" id = "thing" name = "thing"><br><br>
+
+        <label for = "food">Food:</label>
+        <input type = "text" id = "food" name = "food"><br><br>
+
+        <input type= "button" value= "Submit" onClick = "madLib()">
+    </form>
+
+    <br>
+    <div id = "story"></div>
+    <!--Link to GitHub-->
+    <a href = "">Link to SOTD2_2</a>
+</body>
+</html>
