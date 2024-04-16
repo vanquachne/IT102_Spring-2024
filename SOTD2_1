@@ -6,7 +6,7 @@
     <style>
       /*Style for login form*/
       body {
-       text-align: center;
+       text-align: left;
       }
 
       form label {
@@ -21,34 +21,30 @@
       }
 
       form input[type = "button"]{
-        text-align: center;
+        margin-left: 120px;
         background-color: rgba(199, 159, 170, 0.37);
       }      
 
-      #fullName,#emailAddress,#passwordUser{
-        display: inline-block;
-        width: 300px;
-        margin-top: 17px;
-        text-align: left;
-      }
     </style>
 
     <!--JavaScript function-->
     <script language="JavaScript">
       function reveal(){
-        //display data information 
-        document.getElementById("displayData").innerHTML = "<hr>" + "<h2><b>Customer Data</b></h2>";
-        //display first name + last name
+        //variables
         var firstName = document.theForm.elements["fname"].value;
         var lastName = document.theForm.elements["lname"].value;
         var fullName = firstName + " " + lastName;
-        document.getElementById("fullName").innerHTML = "Full Name: " + fullName;
-        //display email address
         var email = document.theForm.elements["validEmail"].value;
-        document.getElementById("emailAddress").innerHTML = "Email Address: " + email;
-        //display password
         var passwordReveal = document.theForm.elements["pass"].value;
-        document.getElementById("passwordUser").innerHTML = "Password: " + passwordReveal;
+
+        //display data information 
+        document.getElementById("displayData").innerHTML = "<hr>" + "<h2><b>Customer Data</b></h2>"
+        //display first name + last name
+        + "Full Name: " + fullName + "<br><br>"
+        //display email address
+        + "Email Address: " + email + "<br><br>"
+        //display password
+        + "Password: " + passwordReveal +"<br><br>";
       }
     </script>
   </head>
@@ -83,11 +79,6 @@
 
     <br><br>
     <div id = displayData></div>
-    <div id = "fullName"></div>
-    <br>
-    <div id = "emailAddress"></div>
-    <br>
-    <div id = "passwordUser"></div>
     <hr>
     <a href = "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD2_1">Link to SOTD2_1</a>
   </body>
