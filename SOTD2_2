@@ -88,6 +88,7 @@
     <br>
     <div id = "story"></div>
     <!--Link to GitHub-->
-    <a href = "">Link to SOTD2_2</a>
+    <hr>
+    <a href = "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD2_2">Link to SOTD2_2</a>
 </body>
 </html>
