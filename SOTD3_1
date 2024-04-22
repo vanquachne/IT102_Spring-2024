@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+
+</head>
+<body>
+    <h1>Guess My Secret Number</h1>
+    <hr>
+    <script>
+        var input = prompt("Get my number between 1 through 5","");
+        var compareNumber = Math.floor(Math.random() * 5) + 1;
+        if(input == compareNumber){
+            alert("Congratulation, " + input + " is the correct guess");
+        } else {
+            alert("Oops! Try it again, your guess is " + input + " while the correct number is " + compareNumber);
+        }
+    </script>
+</body>
+</html>
