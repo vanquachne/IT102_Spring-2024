@@ -10,15 +10,20 @@
     <h1>Guess My Secret Number</h1>
     <hr>
     <script>
+        //Receive input for the user
         var input = prompt("Get my number between 1 through 5","");
+        //Random number as a comparison result 
         var compareNumber = Math.floor(Math.random() * 5) + 1;
+        //If input = result
         if(input == compareNumber){
             alert("Congratulation, " + input + " is the correct guess");
+        //If input != result
         } else {
             alert("Oops! Try it again, your guess is " + input + " while the correct number is " + compareNumber);
         }
     </script>
     <br><br>
+    <!--Link to Github-->
     <a href = "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD3_1">Link to SOTD3_1</a>
 </body>
 </html>
