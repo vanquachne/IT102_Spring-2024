@@ -18,5 +18,7 @@
             alert("Oops! Try it again, your guess is " + input + " while the correct number is " + compareNumber);
         }
     </script>
+    <br><br>
+    <a href = "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD3_1">Link to SOTD3_1</a>
 </body>
 </html>
