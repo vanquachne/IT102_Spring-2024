@@ -15,7 +15,7 @@
 
         div#box{
             width: 400px;
-            height: 180px;
+            height: 140px;
             border: rgb(170, 38, 60) 2px dashed;
             padding: 2px;
             box-sizing: border-box;
@@ -56,7 +56,7 @@
 <body>
     <div id = "box">
         <h1>Let's Make a Deal!</h1>
-        <p>Choose a door:</p>
+        <p><b>Choose a door:</b></p>
         <!--Create select box with specify value-->
         <select id = "mySelect"> 
             <option>--Pick One--</option>
@@ -64,9 +64,9 @@
             <option value = "Door 2">Door 2</option>
             <option value = "Door 3">Door 3</option>
         </select>
-        <br><br>
+        
         <!--Submit button-->
-        <input type = "button" value = "Submit" onclick= "myFunction()">
+        <input type = "button" value = "Select" onclick= "myFunction()">
     </div>
     
     <div id = "result">
@@ -99,6 +99,8 @@
         </script>
         <br><br><br>
         <!--Link to GitHub-->
-        <b><a href= "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD3_2">Link to SOTD3_2</a></b>    
+        <b><a href= "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD3_2">Link to SOTD3_2</a></b>
+
+    
 </body>
 </html>
