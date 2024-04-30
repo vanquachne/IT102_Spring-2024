@@ -19,16 +19,19 @@
             if (input && (input.toUpperCase() === "Y")) {
                 hitMe = true;
                 card = Math.ceil(11*Math.random());
-                total += card;
-                
+                total += card;    
             } else {
                 hitMe = false;
             } 
         }
         //dealer always takes 2 cards
         dealer = Math.ceil(11*Math.random()) + Math.ceil(11*Math.random());
+        /*if you get closer to 21 than the dealer does, without going over, you win!
+          if you get equal to 21, you win!
+        */
         if(total == 21 || (total <= 21 && total > dealer)){
             alert("Congrats!!! Your hand is worth " + total + ". Dealer got " + dealer + ".");
+        // If you get too many cards and go over 21, you lose.     
         } else {
             alert("You lose");
         }
