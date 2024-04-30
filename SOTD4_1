@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack</title>
+</head>
+<body>
     <h1>Blackjack</h1>
-
     <script>
-      //initialize all variables
-      var card = 0;
-      var total = 0;
-      var hitMe = true;
-      var dealer = 0;
-      
-      
-      while (total <= 21){
-      	 hitMe = prompt("Current total: " + total + "Take a card? Y/N");
-          if (hitMe == "Y"){
-     	   	hitMe = true;
-     	  }else {
-      	  	hitMe = false;
-   	      }
-          if(hitMe){
-       		 card = Math.ceil(11*Math.random());
-        	 total += card;
-      	  }
-          card++;
-      }
-
-      //dealer always takes 2 cards
-      dealer = Math.ceil(11*Math.random()) + Math.ceil(11*Math.random());
-
-      alert("Your hand is worth " + total + ". Dealer got " + dealer + ".");
-
+        //initialize all variables
+        var card = 0;
+        var total = 0;
+        var hitMe = true;
+        var dealer = 0;
+        //the player should be able to take hits (get additional cards) as long as the person desires.
+        while (hitMe){
+            var input = prompt("Current total: " + total + ". Take a card? Y/N");
+            if (input && (input.toUpperCase() === "Y")) {
+                hitMe = true;
+                card = Math.ceil(11*Math.random());
+                total += card;
+                
+            } else {
+                hitMe = false;
+            } 
+        }
+        //dealer always takes 2 cards
+        dealer = Math.ceil(11*Math.random()) + Math.ceil(11*Math.random());
+        if(total == 21 || (total <= 21 && total > dealer)){
+            alert("Congrats!!! Your hand is worth " + total + ". Dealer got " + dealer + ".");
+        } else {
+            alert("You lose");
+        }
     </script>
-  </body>
+    <br><br>
+    <a href="https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD4_1">Link to SOTD4_1</a>
+</body>
 </html>
