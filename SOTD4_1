@@ -30,10 +30,13 @@
           if you get equal to 21, you win!
         */
         if(total == 21 || (total <= 21 && total > dealer)){
-            alert("Congrats!!! Your hand is worth " + total + ". Dealer got " + dealer + ".");
-        // If you get too many cards and go over 21, you lose.     
+            alert("You win!!! Your hand is worth " + total + ". Dealer got " + dealer + ".");
+        //if the dealer gets closer to 21 than you do, you lose! 
+        } else if(total <= dealer && dealer <= 21){
+            alert("You lose!! Your hand is worth " + total + " while dealer got " + dealer + ".")
+        // If you get too many cards and go over 21, you lose.      
         } else {
-            alert("You lose");
+            alert("You get too many cards and go over 21, you lose");
         }
     </script>
     <br><br>
