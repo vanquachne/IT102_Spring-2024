@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <title>Calculator</title>
+    <style>
+        body {
+            margin : 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #wrapper{
+            width: 500px;
+            height: 270px;
+            border: rgb(170, 38, 60) 2px dashed;
+            padding: 2px;
+            box-sizing: border-box;
+            margin: 0 auto 0 auto; /*center the box*/
+            background-color: rgba(213, 192, 196, 0.333);
+        }
+
+        #result{
+            display: none;
+            width: 500px;
+            height: 100px;
+            border: rgb(170, 38, 60) 2px dashed;
+            padding: 2px;
+            box-sizing: border-box;
+            margin: 30px auto 30px auto; /*center the box*/
+            background-color: rgba(213, 192, 196, 0.333);
+        }
+
+        form label {
+            display: inline-block;
+            width: 120px;
+            text-align: left;
+            padding-right: 7px;
+        }
+
+        form input{
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+      
+        form input[type = "text"]{
+            width: 190px;
+        }
+
+        form input[type = "button"]{
+            background-color: rgba(168, 139, 147, 0.37);
+        }      
+    </style>
+
+
+
+    <script language="JavaScript">
+    function getSum(){
+        var first = Number(document.theForm.elements["firstNumber"].value);
+        var second = Number(document.theForm.elements["secondNumber"].value);
+        var sum = first + second;
+        document.getElementById("answer").innerHTML = "Sum of 2 numbers: " + sum;
+        document.getElementById("result").style.display = "block";
+        
+    }
+
+    function getDifference(){
+        var first = Number(document.theForm.elements["firstNumber"].value);
+        var second = Number(document.theForm.elements["secondNumber"].value);
+        var difference = first - second;
+        document.getElementById("answer").innerHTML = "Difference of 2 numbers: " + difference;
+        document.getElementById("result").style.display = "block";
+    }
+
+    function getProduct(){
+        var first = Number(document.theForm.elements["firstNumber"].value);
+        var second = Number(document.theForm.elements["secondNumber"].value);
+        var product = first * second;
+        document.getElementById("answer").innerHTML = "Product of 2 numbers: " + product;
+        document.getElementById("result").style.display = "block";
+    }
+
+    function getQuotient(){
+        var first = Number(document.theForm.elements["firstNumber"].value);
+        var second = Number(document.theForm.elements["secondNumber"].value);
+        var quotient = first / second;
+        document.getElementById("answer").innerHTML = "Quotient of 2 numbers: " + quotient;
+        document.getElementById("result").style.display = "block";
+    }
+    </script>
+  </head>
+  <body>
+    <div id = wrapper>
+        <h1>Four Function Calculator</h1>
+        <form name="theForm"><b><i>Enter a number in each box.</i></b><br>
+            <label for = "firstNumber">First Number</label>
+            <input type="text" id = "firstNumber" name = "firstNumber"><br>
+            <label for = "secondNumber">Second Number</label>
+            <input type="text" id = "secondNumber" name = "secondNumber"><br>
+      
+            <input type="button" value="Sum" onClick="getSum()">
+            <input type="button" value="Difference" onClick="getDifference()">
+            <input type="button" value="Product" onClick="getProduct()">
+            <input type="button" value="Quotient" onClick="getQuotient()">
+            
+          </form>
+    </div>
+
+    <div id = "result">
+        <h3>Result</h3>
+        <p id = "answer" ></p>
+    </div>
+
+    <br><br>
+    <hr>
+     <!--Link to GitHub-->
+     <b><a href= "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD5_2">Link to SOTD5_2</a></b>
+    
+    
+  </body>
+
+</html>
