@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+
+</head>
+<body>
+    <h1>Guess My Secret Number</h1>
+    <p id = "target">TARGET NUMBER</p>
+    <hr>
+    <script>
+        //Random number as a comparison result  
+        var compareNumber = Math.floor(Math.random() * 5) + 1;
+        document.getElementById("target").innerHTML = "Target Number: " + compareNumber;
+        var win = false;
+        while (!win){
+            var input = prompt("Get my number between 1 through 5","");
+            while (input > 5 || input < 1 || isNaN(input)){
+                input = prompt("Your number should be a numeric value between 1 through 5","");
+            }
+            //If input = result
+            if(input == compareNumber){
+                alert("Congratulation, " + input + " is the correct guess");
+                win = true;
+            } else if(input < compareNumber){
+                alert("Nope, your guess is too low, guess again");      
+            } else {
+                alert("Nope, your guess is too high, guess again");
+            }
+        }
+
+    </script>
+    <br><br>
+    <!--Link to Github-->
+    <a href = "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD5_1">Link to SOTD5_1</a>
+</body>
+</html>
