@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- HTML Table for Testing Purposes -->
+    <table id = "myTable" style="border: 10px solid red; font-size: 20px; font-weight: bold">
+      <tr id = "row1" style = "color: blue" >
+        <td id = "1.1" style = "border: 2px solid black">Row 1 Col 1</td>
+        <td id = "1.2" style = "border: 2px solid black">Row 1 Col 2</td>
+      </tr>
+    </table>
+
+    <!--Button to Launch a Function -->
+    <br><br>
+    <button type="submit" onclick = "changeTextColor()">Change Text Color</button>
+    <br><br>
+    <!--Add 2nd Button: font size-->
+    <button type="submit" onclick = "changeFontSize()">Change Font Size</button>
+    <br><br>
+    <!--Add 3rd Button: border thickness-->
+    <button type = "submit" onclick = "changeBorderSize()">Change Border Size</button>
+    <br><br>
+    <!--Add 4th Button: border color-->
+    <button type = "submit" onclick = "changeBorderColor()">Change Border Color</button>
+    <br><br>
+
+    <script>
+      // First JavaScript Function
+      // Changes text color from blue to green and back again
+
+     function changeTextColor(){
+       var textcolor = document.getElementById("row1").style.color;
+       if (textcolor== "green"){
+         textcolor = "blue";
+       }else{
+         textcolor = "green";
+       }
+       document.getElementById("row1").style.color = textcolor;
+     }
+
+     // Changes font size from default to big and back again
+    function changeFontSize(){
+        var textsize = document.getElementById("myTable").style.fontSize;
+        if (textsize == "20px"){
+            textsize = "40px";
+        } else {
+            textsize = "20px";
+        }
+        document.getElementById("myTable").style.fontSize = textsize;
+
+    }
+
+     // Changes border size from defalut to big and back again
+    function changeBorderSize(){
+        var bordersize = document.getElementById("myTable").style.borderWidth;
+        if (bordersize == "10px"){
+            bordersize = "20px";
+        }else{
+            bordersize = "10px";
+        }
+        document.getElementById("myTable").style.borderWidth = bordersize;
+    }
+
+    function changeBorderColor(){
+        var bordercolor = document.getElementById("myTable").style.borderColor;
+        if (bordercolor == "red"){
+            bordercolor = "pink";
+        }else{
+            bordercolor = "red";
+        }
+        document.getElementById("myTable").style.borderColor = bordercolor;
+    }
+    </script>
+
+     <!--Link to GitHub-->
+     <b><a href= "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD6_1">Link to SOTD6_1</a></b>
+  </body>
+</html>
