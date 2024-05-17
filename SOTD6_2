@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing Card Object</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+
+        #wrapper{
+            width: 940px;
+            margin: 20px auto;
+           
+        }
+
+        #row{
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+        .box{
+            width: 300px;
+            padding: 20px;
+            background-color: rgb(235, 224, 226);
+            float: left;
+            margin-left: 90px;
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+        h2{
+            margin-top: 20px
+        }
+        button{
+            margin-top: 20px;
+        }
+
+        p{
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #resultBox{
+            display: none;
+            width: 710px;
+            background-color: rgb(235, 224, 226);
+            margin-left: 90px;
+            padding: 30px;
+            overflow: hidden;
+        }
+
+        footer{
+            clear: both;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id = "wrapper">
+        <div id = "row">
+            <div class ="box">
+                <h2>Display Specific Card Values</h2>
+                <button type="button" onclick="displaySpecificValues()">Display Specific Value</button>
+            </div>
+        
+            <div class = "box">
+                <h2>Display All Card Values</h2>
+                <button type="button" onclick="displayAllValues()">Display All Value</button>
+                
+            </div>
+            
+            
+    
+        </div>
+
+        <div id = "resultBox">
+            <p id="result"></p>
+        </div>
+
+    <script>
+        function Card(suit, rank) {
+            this.suit = suit;
+            this.rank = rank;
+            this.isVisible = true;
+            this.show = function () {
+                this.isVisible = true;
+            }
+            this.hide = function () {
+                this.isVisible = false;
+            }
+            this.displayVisible = function () {
+                if (this.isVisible === true) {
+                    document.getElementById("resultBox").style.display = "block";
+                    document.getElementById("result").innerHTML += "<b>Display a specific card:</b><br>" +
+                        "Suit: " + this.suit + "<br>Rank: " + this.rank + "<br><br>";
+                }
+            }
+
+            this.displayAllValue = function () {
+                document.getElementById("resultBox").style.display = "block";
+                document.getElementById("result").innerHTML += "<b>Display all card:</b><br>" +
+                    "Suit: " + this.suit + "<br>Rank: " + this.rank + "<br><br>";
+            }
+        }
+
+        var card = [];
+        card[0] = new Card("Clubs", 10);
+        card[1] = new Card("Hearts", 7);
+        card[2] = new Card("Spades", 3);
+        card[3] = new Card("Diamonds", 6);
+        card[4] = new Card("Clubs", 1);
+        card[5] = new Card("Spades", 9);
+
+        function displaySpecificValues() {
+            clearResult();
+            for (var i = 0; i < card.length; i++) {
+                if (card[i].suit === "Clubs" || card[i].suit === "Spades") {
+                    card[i].show();
+                    card[i].displayVisible();
+                } else {
+                    card[i].hide();
+                }
+            }
+        }
+
+        function displayAllValues() {
+            clearResult();
+            for (var i = 0; i < card.length; i++) {
+                card[i].displayAllValue();
+            }
+        }
+
+        function clearResult() {
+            document.getElementById("result").innerHTML = "";
+        }
+
+    </script>
+    <footer><!--Link to GitHub-->
+        <b><a href= "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD6_2">Link to SOTD6_2</a></b>
+    </footer>
+    </div>
+
+</body>
+</html>
