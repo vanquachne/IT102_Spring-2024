@@ -9,7 +9,7 @@
 
 <body>
     <h1>Blackjack</h1>
-    <div id="result">I have no card</p>
+    <p id="result">I have no card</p>
     <button onClick="startGame()">Start Game</button>
 
     <script>
