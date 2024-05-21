@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <h1>Grocery List</h1>
+  <p id = "item">Nothing here yet!</p>
+  
+  <button onclick = "addItems()">Add Item</button>
+  
+  <!--JavaScript part-->
+  <script>
+    var shoppingList = [];
+
+    function addItems() {
+      var stop = false;
+      while (!stop) {
+        var item = prompt("Add your item to the list", "");
+        if (item == "" || item == null){
+          stop = true;
+        } else {
+            shoppingList.push(item);
+            showList(shoppingList); //pasing shoppingList as the parameter
+            stop = !confirm("Add another item?");
+        }
+      }
+    }
+	
+    //Show the list after finishing the adding process
+    function showList(list) {
+      var show = "";
+      for (var i = 0; i < list.length; i++) {
+        show += i + 1 + ". " + list[i] + "<br>";
+      }
+      document.getElementById("item").innerHTML = show + "<br>";
+    }
+
+  </script>
+
+  <footer style="margin-top: 40px;>
+    <!--Link to GitHub 7-1-->
+    <b><a href="https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD7_2">Link to SOTD7_2</a> 
+      </b>
+  </footer>
+</body>
+
+</html>
