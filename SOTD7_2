@@ -1,76 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deck of Card</title>
 </head>
+
 <body>
-    <div id = "result"></div>
+    <h1>Blackjack</h1>
+    <div id="result">I have no card</p>
+    <button onClick="startGame()">Start Game</button>
+
     <script>
-        function Card(suit,rank){
+
+
+        function Card(suit, rank) {
+            //properties
             this.suit = suit;
             this.rank = rank;
             this.isVisible = false; //default: false
-            this.show = function(){
+            //methods
+            this.show = function () {
                 this.isVisible = true;
             }
-            this.hide = function(){
+            this.hide = function () {
                 this.isVisible = false;
             }
-            
+
         }
 
-        function createDeck(){
+        function createDeck() {
             var suit = ["Hearts", "Diamonds", "Clubs", "Spades"];
             var rank = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"];
             var deck = [];
 
-            for(var i = 0; i < suit.length; i++){
-                for(var j = 0; j < rank.length; j++){
-                    var card = new Card(suit[i],rank[j]);
+            for (var i = 0; i < suit.length; i++) {
+                for (var j = 0; j < rank.length; j++) {
+                    var card = new Card(suit[i], rank[j]);
                     deck.push(card);
                 }
             }
             return deck;
         }
 
-        function dealCards(deck){
-            var hand = [];
-            var counter = 0;
-
-            while (counter < 3){
-                var randomCard = deck[Math.floor(Math.random() * 52)];
-                
-                if(!randomCard.isVisible){
-                    hand.push(randomCard);
-                    randomCard.show();
-                    counter++;
-                } else {
-                    randomCard.hide();
-                }
-            }
-            return hand;
+      function dealCards(deck){
+        var hand = [];
+        var counter = 0;
+        while (counter < 3){
+           var randomCard = deck[Math.floor(Math.random() * 52)];
+           if(!randomCard.isVisible){
+               hand.push(randomCard);
+               randomCard.show();
+               counter++;
+           } else {
+               randomCard.hide();
+           }
         }
+        return hand; 
+      }
 
-       
-
+      function startGame(){
         var deck = createDeck();
         var hand = dealCards(deck);
         var handText = "";
-
-        for(var i = 0; i <hand.length; i++){
-            handText += hand[i].rank + " of " + hand[i].suit + "<br><br>";
+        for(var i = 0; i < hand.length; i++){
+          handText += hand[i].rank + " of " + hand[i].suit + "<br><br>";
         }
 
-        document.getElementById("result").innerHTML = "<h1> Deck of Card</h1>" + handText;   
+        document.getElementById("result").innerHTML =  handText;  
+      }
     </script>
-    
-    <footer style = "margin-top: 40px;"><!--Link to GitHub-->
-        <b><a href= "https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD7_2">Link to SOTD7_2</a></b>
-    </footer>
-    
 
-    
+
+
+    <footer style="margin-top: 40px;"><!--Link to GitHub-->
+        <b><a href="https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD7_2">Link to SOTD7_2</a> 
+    </b>
+    </footer>
+
+
+
 </body>
+
 </html>
