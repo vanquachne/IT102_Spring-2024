@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>Grocery List</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -27,6 +27,7 @@
           stop = true;
         } else {
             shoppingList.push(item);
+            shoppingList.sort();
             showList(shoppingList); //pasing shoppingList as the parameter
             stop = !confirm("Add another item?");
         }
@@ -39,14 +40,15 @@
       for (var i = 0; i < list.length; i++) {
         show += i + 1 + ". " + list[i] + "<br>";
       }
+    
       document.getElementById("item").innerHTML = show + "<br>";
     }
 
   </script>
 
-  <footer style="margin-top: 40px;>
+  <footer style="margin-top: 40px;">
     <!--Link to GitHub 7-1-->
-    <b><a href="https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD7_2">Link to SOTD7_2</a> 
+    <b><a href="https://github.com/vanquachne/IT102_Spring_2024/blob/main/SOTD7_1">Link to SOTD7_1</a> 
       </b>
   </footer>
 </body>
