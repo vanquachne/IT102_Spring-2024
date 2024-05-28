@@ -18,7 +18,10 @@
             alert("Game started");
             myDeck = new Deck();
             myDeck.createDeck();
-            alert(myDeck.cards[0].suit);
+            alert("Before shuffling the cards\n\nSuit at index 0: "+ myDeck.cards[0].suit + 
+            "\nRank at index 0: " + myDeck.cards[0].rank);
+            myDeck.shuffle();
+            alert("After shuffling the cards\n\nSuit at index 0 : " + myDeck.cards[0].suit + "\nRank at index 0: " + myDeck.cards[0].rank);
         }
         
         function Card(suit, rank) {
@@ -59,21 +62,13 @@
                     //Swap the cards
                     var temp = this.cards[i]; //store card value at index i
                     this.cards[i] = this.cards[randomIndex]; //card value at index i is now card value at randomIndex
-                    this.card[randomIndex] = temp; //card value at randomIndex is now card value at index i
-                    
+                    this.cards[randomIndex] = temp; //card value at randomIndex is now card value at index i
                 }
             }
             
         }
 
     </script>
-
-
-
-
-
-
-
 </body>
 
 </html>
